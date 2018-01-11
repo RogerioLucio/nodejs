@@ -14,6 +14,8 @@ var app = express();
 // configurando vies
 app.set('view engine', 'ejs');
 app.set('views','./app/views');
+//Informa o caminho dos nossos arquivos estáticos
+app.use(express.static('./app/public'))
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressValidator());
 
